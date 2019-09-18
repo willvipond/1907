@@ -17,7 +17,7 @@
       <div class="indeterminate"></div>
     </div>
     <div style="position: relative" class="margin">
-      <video src="bbt.mp4" id="inputVideo" autoplay muted loop playsinline></video>
+      <video src="media/bbt.mp4" id="inputVideo" autoplay muted loop playsinline></video>
       <canvas id="overlay" />
     </div>
 
@@ -194,7 +194,7 @@
     async function run() {
       // load face detection and face landmark models
       await changeFaceDetector(TINY_FACE_DETECTOR)
-      await faceapi.loadFaceLandmarkModel('/')
+      await faceapi.loadFaceLandmarkModel('weights')
       changeInputSize(416)
 
       // start processing frames

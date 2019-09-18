@@ -269,8 +269,8 @@
     async function run() {
       // load face detection, face landmark model and face recognition models
       await changeFaceDetector(selectedFaceDetector)
-      await faceapi.loadFaceLandmarkModel('/')
-      await faceapi.loadFaceRecognitionModel('/')
+      await faceapi.loadFaceLandmarkModel('weights')
+      await faceapi.loadFaceRecognitionModel('weights')
     }
 
     $(document).ready(function() {

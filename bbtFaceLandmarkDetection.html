@@ -53,7 +53,7 @@
     }
 
     async function run() {
-      await faceapi.loadFaceLandmarkModel('/')
+      await faceapi.loadFaceLandmarkModel('weights')
       $('#loader').hide()
       await onSelectionChanged($('#selectList select').val())
     }

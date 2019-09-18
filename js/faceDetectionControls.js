@@ -99,7 +99,7 @@ async function changeFaceDetector(detector) {
 
   $('#loader').show()
   if (!isFaceDetectionModelLoaded()) {
-    await getCurrentFaceDetectionNet().load('/')
+    await getCurrentFaceDetectionNet().loadFromUri('weights')
   }
 
   $(`#${detector}_controls`).show()

@@ -174,8 +174,8 @@
       // load face detection and age and gender recognition models
       // and load face landmark model for face alignment
       await changeFaceDetector(SSD_MOBILENETV1)
-      // await faceapi.loadFaceLandmarkModel('weights')
-      // await faceapi.nets.ageGenderNet.load('weights')
+      await faceapi.loadFaceLandmarkModel('weights')
+      await faceapi.nets.ageGenderNet.load('weights')
 
       // start processing image
       updateResults()
@@ -186,15 +186,7 @@
       initImageSelectionControls('images/happy.jpg', true)
       initFaceDetectionControls()
       console.log(faceapi.nets)
-
-      Promise.all([
-    faceapi.nets.tinyFaceDetector.loadFromUri('weights'),
-    faceapi.nets.faceLandmark68Net.loadFromUri('weights'),
-    faceapi.nets.faceRecognitionNet.loadFromUri('weights'),
-    faceapi.nets.ageGenderNet.loadFromUri('weights')
-   // faceapi.nets.ageGenderNet.loadFromUri('weights')
-]).then(run)
-    //  run()
+      run()
     })
   </script>
 </body>
