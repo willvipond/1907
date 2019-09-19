@@ -98,7 +98,7 @@
     }
 
     async function run() {
-      await faceapi.loadFaceRecognitionModel('/')
+      await faceapi.loadFaceRecognitionModel('weights')
       faceMatcher = await createBbtFaceMatcher(1)
       $('#loader').hide()
 
